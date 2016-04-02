@@ -74,16 +74,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(SolutionDir)eigen\include;$(SolutionDir)Sophus\include;$(SolutionDir)dirent\include;$(SolutionDir)boost\include;$(SolutionDir)opencv3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)boost\lib;$(SolutionDir)opencv3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir);$(SolutionDir)ext\eigen\include;$(SolutionDir)ext\sophus\include;$(SolutionDir)ext\dirent\include;$(SolutionDir)ext\boost\include;$(SolutionDir)ext\opencv3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ext\boost\lib;$(SolutionDir)ext\opencv3\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(SolutionDir)eigen\include;$(SolutionDir)Sophus\include;$(SolutionDir)dirent\include;$(SolutionDir)boost\include;$(SolutionDir)opencv3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)boost\lib;$(SolutionDir)opencv3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir);$(SolutionDir)ext\eigen\include;$(SolutionDir)ext\sophus\include;$(SolutionDir)ext\dirent\include;$(SolutionDir)ext\boost\include;$(SolutionDir)ext\opencv3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ext\boost\lib;$(SolutionDir)ext\opencv3\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -145,9 +145,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructures\Frame.h" />
     <ClInclude Include="DataStructures\FrameMemory.h" />

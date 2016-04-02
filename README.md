@@ -14,19 +14,16 @@ This fork contains a version that relieves the user of the horrors of a ROS depe
 
 * **Semi-Dense Visual Odometry for a Monocular Camera**, *J. Engel, J. Sturm, D. Cremers*, ICCV '13
 
-# 1. Quickstart / Minimal Setup
+# Fork
 
-Requires OpenCV (with nonfree if you want FABMAP), Boost, Eigen, Pangolin and g2o. Tested on 14.04 without any problems.
+This fork is a personal attempt at using LSD-SLAM on Windows through Visual Studio.
 
-# 2. Installation
+## Setting Up External Libraries
 
-Install everything from apt repos if you can, otherwise there are githubs for Pangolin and g2o. Then usual cmake building process.
-
-# 3. Running
-
-Supports raw PNG images. For example, you can down any dataset from [here](http://vision.in.tum.de/lsdslam) in PNG format, and run like;
-
-./LSD -c ~/Mono_Logs/LSD_machine/cameraCalibration.cfg -f ~/Mono_Logs/LSD_machine/images/
-
-# 4. License
-LSD-SLAM is licensed under the GNU General Public License Version 3 (GPLv3), see http://www.gnu.org/licenses/gpl.html.
+See the [README](ext/README.md) in the `ext` (external) folder for instructions on how to setup the folder. The dependencies needed are:
+- boost (1.60.0, http://www.boost.org/)
+- dirent (https://github.com/tronkko/dirent, header only)
+- eigen (https://github.com/RLovelett/eigen, http://eigen.tuxfamily.org/index.php?title=Main_Page, header only)
+- opencv3 (3.1.0, http://opencv.org/)
+- openfabmap (TODO)
+- sophus (https://github.com/strasdat/Sophus, header only)
