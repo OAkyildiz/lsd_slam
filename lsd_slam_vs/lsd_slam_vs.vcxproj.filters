@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{83b92a3a-93d4-44e4-98ff-35f0055f267b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tracking">
+      <UniqueIdentifier>{6d9eb8b7-55d9-4b26-944c-967836415b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IOWrapper">
+      <UniqueIdentifier>{d1ee765e-4b5b-48d3-a6c1-0b7923227d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GlobalMapping">
+      <UniqueIdentifier>{faca71e9-93f0-41f7-bea4-214834b182ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DepthEstimation">
+      <UniqueIdentifier>{34d664d8-25d9-42ef-912e-4e382ad5852d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataStructures">
+      <UniqueIdentifier>{79d24f86-5eec-48a1-b25b-6fb6bb65dc99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IOWrapper">
+      <UniqueIdentifier>{f4f4a024-47b6-4af7-af65-aea810a49494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GlobalMapping">
+      <UniqueIdentifier>{2f0489a5-34ae-4c89-986c-d79c2c3084f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DepthEstimation">
+      <UniqueIdentifier>{46b99118-09fb-4577-a7f8-549419bc8a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataStructures">
+      <UniqueIdentifier>{793be71c-4768-4bfb-bccf-4211ba6ac2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{c2420585-463e-4b13-9143-78c8a5eb277e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tracking">
+      <UniqueIdentifier>{24ca9daf-6d27-474e-aedc-4bfe04f02659}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiveSLAMWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SlamSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util\RawLogReader.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Resolution.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\settings.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\SophusUtil.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Stopwatch.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\ThreadMutexObject.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Undistorter.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\EigenCoreInclude.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\globalFuncs.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\IndexThreadReduce.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Intrinsics.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Parse.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking\Sim3Tracker.h">
+      <Filter>Header Files\Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking\TrackingReference.h">
+      <Filter>Header Files\Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking\LGSX.h">
+      <Filter>Header Files\Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking\Relocalizer.h">
+      <Filter>Header Files\Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking\SE3Tracker.h">
+      <Filter>Header Files\Tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\FramePoseStruct.h">
+      <Filter>Header Files\DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Frame.h">
+      <Filter>Header Files\DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\FrameMemory.h">
+      <Filter>Header Files\DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthEstimation\DepthMapPixelHypothesis.h">
+      <Filter>Header Files\DepthEstimation</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthEstimation\DepthMap.h">
+      <Filter>Header Files\DepthEstimation</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalMapping\g2oTypeSim3Sophus.h">
+      <Filter>Header Files\GlobalMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalMapping\KeyFrameGraph.h">
+      <Filter>Header Files\GlobalMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalMapping\TrackableKeyFrameSearch.h">
+      <Filter>Header Files\GlobalMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalMapping\FabMap.h">
+      <Filter>Header Files\GlobalMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\NotifyBuffer.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\Output3DWrapper.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\Timestamp.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\TimestampedObject.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\ImageDisplay.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\InputImageStream.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\Pangolin\Keyframe.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.h">
+      <Filter>Header Files\IOWrapper</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lsd_slam_vs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiveSLAMWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LSD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SlamSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\SophusUtil.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\Undistorter.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\globalFuncs.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\RawLogReader.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\settings.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracking\SE3Tracker.cpp">
+      <Filter>Source Files\Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracking\Sim3Tracker.cpp">
+      <Filter>Source Files\Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracking\TrackingReference.cpp">
+      <Filter>Source Files\Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracking\Relocalizer.cpp">
+      <Filter>Source Files\Tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStructures\FrameMemory.cpp">
+      <Filter>Source Files\DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStructures\FramePoseStruct.cpp">
+      <Filter>Source Files\DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStructures\Frame.cpp">
+      <Filter>Source Files\DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthEstimation\DepthMapPixelHypothesis.cpp">
+      <Filter>Source Files\DepthEstimation</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthEstimation\DepthMap.cpp">
+      <Filter>Source Files\DepthEstimation</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalMapping\KeyFrameGraph.cpp">
+      <Filter>Source Files\GlobalMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalMapping\TrackableKeyFrameSearch.cpp">
+      <Filter>Source Files\GlobalMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalMapping\FabMap.cpp">
+      <Filter>Source Files\GlobalMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalMapping\g2oTypeSim3Sophus.cpp">
+      <Filter>Source Files\GlobalMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="IOWrapper\Timestamp.cpp">
+      <Filter>Source Files\IOWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.cpp">
+      <Filter>Source Files\IOWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="IOWrapper\OpenCV\ImageDisplay_OpenCV.cpp">
+      <Filter>Source Files\IOWrapper</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

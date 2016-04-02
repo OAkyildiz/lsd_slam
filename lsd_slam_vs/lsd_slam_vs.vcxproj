@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FDF71459-E55C-48E0-BBA8-CE1FB3F30FC8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>lsd_slam_vs</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(SolutionDir)eigen\include;$(SolutionDir)Sophus\include;$(SolutionDir)dirent\include;$(SolutionDir)boost\include;$(SolutionDir)opencv3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)boost\lib;$(SolutionDir)opencv3\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(SolutionDir)eigen\include;$(SolutionDir)Sophus\include;$(SolutionDir)dirent\include;$(SolutionDir)boost\include;$(SolutionDir)opencv3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)boost\lib;$(SolutionDir)opencv3\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataStructures\Frame.h" />
+    <ClInclude Include="DataStructures\FrameMemory.h" />
+    <ClInclude Include="DataStructures\FramePoseStruct.h" />
+    <ClInclude Include="DepthEstimation\DepthMap.h" />
+    <ClInclude Include="DepthEstimation\DepthMapPixelHypothesis.h" />
+    <ClInclude Include="GlobalMapping\FabMap.h" />
+    <ClInclude Include="GlobalMapping\g2oTypeSim3Sophus.h" />
+    <ClInclude Include="GlobalMapping\KeyFrameGraph.h" />
+    <ClInclude Include="GlobalMapping\TrackableKeyFrameSearch.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="IOWrapper\ImageDisplay.h" />
+    <ClInclude Include="IOWrapper\InputImageStream.h" />
+    <ClInclude Include="IOWrapper\NotifyBuffer.h" />
+    <ClInclude Include="IOWrapper\Output3DWrapper.h" />
+    <ClInclude Include="IOWrapper\Pangolin\Keyframe.h" />
+    <ClInclude Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.h" />
+    <ClInclude Include="IOWrapper\Timestamp.h" />
+    <ClInclude Include="IOWrapper\TimestampedObject.h" />
+    <ClInclude Include="LiveSLAMWrapper.h" />
+    <ClInclude Include="SlamSystem.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Tracking\LGSX.h" />
+    <ClInclude Include="Tracking\Relocalizer.h" />
+    <ClInclude Include="Tracking\SE3Tracker.h" />
+    <ClInclude Include="Tracking\Sim3Tracker.h" />
+    <ClInclude Include="Tracking\TrackingReference.h" />
+    <ClInclude Include="util\EigenCoreInclude.h" />
+    <ClInclude Include="util\globalFuncs.h" />
+    <ClInclude Include="util\IndexThreadReduce.h" />
+    <ClInclude Include="util\Intrinsics.h" />
+    <ClInclude Include="util\Parse.h" />
+    <ClInclude Include="util\RawLogReader.h" />
+    <ClInclude Include="util\Resolution.h" />
+    <ClInclude Include="util\settings.h" />
+    <ClInclude Include="util\SophusUtil.h" />
+    <ClInclude Include="util\Stopwatch.h" />
+    <ClInclude Include="util\ThreadMutexObject.h" />
+    <ClInclude Include="util\Undistorter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataStructures\Frame.cpp" />
+    <ClCompile Include="DataStructures\FrameMemory.cpp" />
+    <ClCompile Include="DataStructures\FramePoseStruct.cpp" />
+    <ClCompile Include="DepthEstimation\DepthMap.cpp" />
+    <ClCompile Include="DepthEstimation\DepthMapPixelHypothesis.cpp" />
+    <ClCompile Include="GlobalMapping\FabMap.cpp" />
+    <ClCompile Include="GlobalMapping\g2oTypeSim3Sophus.cpp" />
+    <ClCompile Include="GlobalMapping\KeyFrameGraph.cpp" />
+    <ClCompile Include="GlobalMapping\TrackableKeyFrameSearch.cpp" />
+    <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="IOWrapper\OpenCV\ImageDisplay_OpenCV.cpp" />
+    <ClCompile Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.cpp" />
+    <ClCompile Include="IOWrapper\Timestamp.cpp" />
+    <ClCompile Include="LiveSLAMWrapper.cpp" />
+    <ClCompile Include="LSD.cpp" />
+    <ClCompile Include="lsd_slam_vs.cpp" />
+    <ClCompile Include="SlamSystem.cpp" />
+    <ClCompile Include="Tracking\Relocalizer.cpp" />
+    <ClCompile Include="Tracking\SE3Tracker.cpp" />
+    <ClCompile Include="Tracking\Sim3Tracker.cpp" />
+    <ClCompile Include="Tracking\TrackingReference.cpp" />
+    <ClCompile Include="util\globalFuncs.cpp" />
+    <ClCompile Include="util\RawLogReader.cpp" />
+    <ClCompile Include="util\settings.cpp" />
+    <ClCompile Include="util\SophusUtil.cpp" />
+    <ClCompile Include="util\Undistorter.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
