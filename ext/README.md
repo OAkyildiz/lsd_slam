@@ -4,7 +4,7 @@
 
 Place or symlink external libraries here in the following format:
 
-<library name (lowercase)>/{include, lib}/<files>
+{library name (lowercase)}/{include, lib}/{files}
 
 e.g. OpenCV3
 
@@ -16,3 +16,4 @@ opencv3
     - ...
 - lib
   - opencv_*.dll
+- {license, if not in the source}

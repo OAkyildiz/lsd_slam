@@ -54,9 +54,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GUI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LiveSLAMWrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -159,10 +156,13 @@
     <ClInclude Include="IOWrapper\InputImageStream.h">
       <Filter>Header Files\IOWrapper</Filter>
     </ClInclude>
-    <ClInclude Include="IOWrapper\Pangolin\Keyframe.h">
-      <Filter>Header Files\IOWrapper</Filter>
+    <ClInclude Include="win_polyfill.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.h">
+    <ClInclude Include="easywsclient.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOWrapper\WebsocketClientOutput3DWrapper.h">
       <Filter>Header Files\IOWrapper</Filter>
     </ClInclude>
   </ItemGroup>
@@ -173,13 +173,7 @@
     <ClCompile Include="LiveSLAMWrapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LSD.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SlamSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="util\SophusUtil.cpp">
@@ -239,11 +233,17 @@
     <ClCompile Include="IOWrapper\Timestamp.cpp">
       <Filter>Source Files\IOWrapper</Filter>
     </ClCompile>
-    <ClCompile Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.cpp">
-      <Filter>Source Files\IOWrapper</Filter>
-    </ClCompile>
     <ClCompile Include="IOWrapper\OpenCV\ImageDisplay_OpenCV.cpp">
       <Filter>Source Files\IOWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="easywsclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOWrapper\WebsocketClientOutput3DWrapper.cpp">
+      <Filter>Source Files\IOWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="win_polyfill.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

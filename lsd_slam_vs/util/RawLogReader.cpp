@@ -20,7 +20,8 @@ RawLogReader::RawLogReader(Bytef *& decompressionBuffer,
 {
     assert(boost::filesystem::exists(file.c_str()));
 
-    fp = fopen(file.c_str(), "rb");
+	FILE * fp;
+    fopen_s(&fp, file.c_str(), "rb");
 
     currentFrame = 0;
 

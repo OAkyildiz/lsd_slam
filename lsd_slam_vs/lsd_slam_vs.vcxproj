@@ -74,16 +74,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(SolutionDir)ext\eigen\include;$(SolutionDir)ext\sophus\include;$(SolutionDir)ext\dirent\include;$(SolutionDir)ext\boost\include;$(SolutionDir)ext\opencv3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)ext\boost\lib;$(SolutionDir)ext\opencv3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir);$(SolutionDir)ext\boost\include;$(SolutionDir)ext\ceres\include;$(SolutionDir)ext\csparse\include;$(SolutionDir)ext\dirent\include;$(SolutionDir)ext\eigen\include;$(SolutionDir)ext\freeglut\include;$(SolutionDir)ext\g2o\include;$(SolutionDir)ext\opencv3\include;$(SolutionDir)ext\openfabmap\include;$(SolutionDir)ext\sophus\include;$(SolutionDir)ext\zlib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ext\boost\lib;$(SolutionDir)ext\opencv3\lib;$(SolutionDir)ext\g2o\lib;$(SolutionDir)ext\zlib\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(SolutionDir)ext\eigen\include;$(SolutionDir)ext\sophus\include;$(SolutionDir)ext\dirent\include;$(SolutionDir)ext\boost\include;$(SolutionDir)ext\opencv3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)ext\boost\lib;$(SolutionDir)ext\opencv3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir);$(SolutionDir)ext\boost\include;$(SolutionDir)ext\ceres\include;$(SolutionDir)ext\csparse\include;$(SolutionDir)ext\dirent\include;$(SolutionDir)ext\eigen\include;$(SolutionDir)ext\freeglut\include;$(SolutionDir)ext\g2o\include;$(SolutionDir)ext\opencv3\include;$(SolutionDir)ext\openfabmap\include;$(SolutionDir)ext\sophus\include;$(SolutionDir)ext\zlib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ext\boost\lib;$(SolutionDir)ext\opencv3\lib;$(SolutionDir)ext\g2o\lib;$(SolutionDir)ext\zlib\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,6 +109,9 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world310.lib;g2o_calibration_odom_laser.lib;g2o_cli.lib;g2o_core.lib;g2o_csparse_extension.lib;g2o_ext_csparse.lib;g2o_ext_freeglut_minimal.lib;g2o_hierarchical.lib;g2o_interface.lib;g2o_opengl_helper.lib;g2o_parser.lib;g2o_simulator.lib;g2o_solver_csparse.lib;g2o_solver_dense.lib;g2o_solver_eigen.lib;g2o_solver_pcg.lib;g2o_solver_slam2d_linear.lib;g2o_solver_structure_only.lib;g2o_stuff.lib;g2o_tutorial_slam2d.lib;g2o_types_data.lib;g2o_types_icp.lib;g2o_types_sba.lib;g2o_types_sclam2d.lib;g2o_types_sim3.lib;g2o_types_slam2d.lib;g2o_types_slam2d_addons.lib;g2o_types_slam3d.lib;g2o_types_slam3d_addons.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,6 +146,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world310.lib;g2o_calibration_odom_laser.lib;g2o_cli.lib;g2o_core.lib;g2o_csparse_extension.lib;g2o_ext_csparse.lib;g2o_ext_freeglut_minimal.lib;g2o_hierarchical.lib;g2o_interface.lib;g2o_opengl_helper.lib;g2o_parser.lib;g2o_simulator.lib;g2o_solver_csparse.lib;g2o_solver_dense.lib;g2o_solver_eigen.lib;g2o_solver_pcg.lib;g2o_solver_slam2d_linear.lib;g2o_solver_structure_only.lib;g2o_stuff.lib;g2o_tutorial_slam2d.lib;g2o_types_data.lib;g2o_types_icp.lib;g2o_types_sba.lib;g2o_types_sclam2d.lib;g2o_types_sim3.lib;g2o_types_slam2d.lib;g2o_types_slam2d_addons.lib;g2o_types_slam3d.lib;g2o_types_slam3d_addons.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -151,17 +157,15 @@
     <ClInclude Include="DataStructures\FramePoseStruct.h" />
     <ClInclude Include="DepthEstimation\DepthMap.h" />
     <ClInclude Include="DepthEstimation\DepthMapPixelHypothesis.h" />
+    <ClInclude Include="easywsclient.hpp" />
     <ClInclude Include="GlobalMapping\FabMap.h" />
     <ClInclude Include="GlobalMapping\g2oTypeSim3Sophus.h" />
     <ClInclude Include="GlobalMapping\KeyFrameGraph.h" />
     <ClInclude Include="GlobalMapping\TrackableKeyFrameSearch.h" />
-    <ClInclude Include="GUI.h" />
     <ClInclude Include="IOWrapper\ImageDisplay.h" />
     <ClInclude Include="IOWrapper\InputImageStream.h" />
     <ClInclude Include="IOWrapper\NotifyBuffer.h" />
     <ClInclude Include="IOWrapper\Output3DWrapper.h" />
-    <ClInclude Include="IOWrapper\Pangolin\Keyframe.h" />
-    <ClInclude Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.h" />
     <ClInclude Include="IOWrapper\Timestamp.h" />
     <ClInclude Include="IOWrapper\TimestampedObject.h" />
     <ClInclude Include="LiveSLAMWrapper.h" />
@@ -184,6 +188,8 @@
     <ClInclude Include="util\Stopwatch.h" />
     <ClInclude Include="util\ThreadMutexObject.h" />
     <ClInclude Include="util\Undistorter.h" />
+    <ClInclude Include="IOWrapper\WebsocketClientOutput3DWrapper.h" />
+    <ClInclude Include="win_polyfill.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures\Frame.cpp" />
@@ -191,16 +197,14 @@
     <ClCompile Include="DataStructures\FramePoseStruct.cpp" />
     <ClCompile Include="DepthEstimation\DepthMap.cpp" />
     <ClCompile Include="DepthEstimation\DepthMapPixelHypothesis.cpp" />
+    <ClCompile Include="easywsclient.cpp" />
     <ClCompile Include="GlobalMapping\FabMap.cpp" />
     <ClCompile Include="GlobalMapping\g2oTypeSim3Sophus.cpp" />
     <ClCompile Include="GlobalMapping\KeyFrameGraph.cpp" />
     <ClCompile Include="GlobalMapping\TrackableKeyFrameSearch.cpp" />
-    <ClCompile Include="GUI.cpp" />
     <ClCompile Include="IOWrapper\OpenCV\ImageDisplay_OpenCV.cpp" />
-    <ClCompile Include="IOWrapper\Pangolin\PangolinOutput3DWrapper.cpp" />
     <ClCompile Include="IOWrapper\Timestamp.cpp" />
     <ClCompile Include="LiveSLAMWrapper.cpp" />
-    <ClCompile Include="LSD.cpp" />
     <ClCompile Include="lsd_slam_vs.cpp" />
     <ClCompile Include="SlamSystem.cpp" />
     <ClCompile Include="Tracking\Relocalizer.cpp" />
@@ -212,6 +216,8 @@
     <ClCompile Include="util\settings.cpp" />
     <ClCompile Include="util\SophusUtil.cpp" />
     <ClCompile Include="util\Undistorter.cpp" />
+    <ClCompile Include="IOWrapper\WebsocketClientOutput3DWrapper.cpp" />
+    <ClCompile Include="win_polyfill.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

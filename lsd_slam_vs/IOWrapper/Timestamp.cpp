@@ -29,7 +29,7 @@ namespace lsd_slam
 {
 
 
-const std::chrono::monotonic_clock::time_point Timestamp::startupTimePoint = std::chrono::monotonic_clock::now();
+const std::chrono::steady_clock::time_point Timestamp::startupTimePoint = std::chrono::steady_clock::now();
 boost::mutex Timestamp::localtimeMutex;
 
 Timestamp::Timestamp()
@@ -51,13 +51,13 @@ double Timestamp::toSec() const
 std::string Timestamp::toDateStr(const char* format) const
 {
 	auto in_time_t = std::chrono::system_clock::to_time_t(systemTimePoint);
-	struct tm* loc_time_t;
+	struct tm loc_time_t;
 	
 	boost::unique_lock<boost::mutex> lock(localtimeMutex);
 	// localtime is not re-entrant.
-	loc_time_t = std::localtime(&in_time_t);
+	localtime_s(&loc_time_t, &in_time_t);
 	char buffer[128];
-	std::strftime(buffer, 128, format, loc_time_t);
+	std::strftime(buffer, 128, format, &loc_time_t);
 	lock.unlock();
 	
     return buffer;
@@ -71,7 +71,7 @@ double Timestamp::secondsUntil(const Timestamp& other) const
 Timestamp Timestamp::now()
 {
 	Timestamp result;
-	result.timePoint = std::chrono::monotonic_clock::now();
+	result.timePoint = std::chrono::steady_clock::now();
 	result.systemTimePoint = std::chrono::system_clock::now();
 	return result;
 }

@@ -25,6 +25,8 @@
 #include "DataStructures/Frame.h"
 #include "Tracking/SE3Tracker.h"
 
+#include "win_polyfill.h"
+
 namespace lsd_slam
 {
 

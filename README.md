@@ -21,9 +21,19 @@ This fork is a personal attempt at using LSD-SLAM on Windows through Visual Stud
 ## Setting Up External Libraries
 
 See the [README](ext/README.md) in the `ext` (external) folder for instructions on how to setup the folder. The dependencies needed are:
-- boost (1.60.0, http://www.boost.org/)
+- boost (1.60.0, http://www.boost.org/, use installer)
 - dirent (https://github.com/tronkko/dirent, header only)
 - eigen (https://github.com/RLovelett/eigen, http://eigen.tuxfamily.org/index.php?title=Main_Page, header only)
-- opencv3 (3.1.0, http://opencv.org/)
+- g2o (https://github.com/RainerKuemmerle/g2o, build with cmake (VS2015))
+  - ceres (will be built into the g2o dlls, copy the header files in EXTERNAL)
+  - csparse (same)
+  - freeglut (same)
+- opencv3 (3.1.0, http://opencv.org/, use installer)
 - openfabmap (TODO)
-- sophus (https://github.com/strasdat/Sophus, header only)
+- sophus (https://github.com/stevenlovegrove/Sophus.git fork, header only)
+- zlib (http://www.zlib.net/, build with cmake (VS2015)
+
+## Modifications Made
+
+- A fork of Sophus for MSVC was used
+- https://github.com/strasdat/Sophus/issues/12

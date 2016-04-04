@@ -9,19 +9,37 @@
 #ifndef STOPWATCH_H_
 #define STOPWATCH_H_
 
-#include <sys/socket.h>
-#include <netinet/in.h>
+#if _WIN32
+	#include <tchar.h>
+	#include <WinSock2.h>
+	#include <Ws2tcpip.h>
+#else
+	#include <sys/socket.h>
+	#include <netinet/in.h>
+	#include <arpa/inet.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
-#include <arpa/inet.h>
 
 #include <string.h>
-#include <sys/time.h>
+#if _WIN32
+	#include <time.h>
+#else
+	#include <sys/time.h>
+#endif
 #include <vector>
 #include <string>
-#include <unistd.h>
+#if _WIN32
+	#include <io.h>
+//	#include <process.h>
+//	#include <direct.h>
+#else
+	#include <unistd.h>
+#endif
 #include <iostream>
 #include <map>
+
+#include "win_polyfill.h"
 
 #define SEND_INTERVAL_MS 10000
 
@@ -110,7 +128,7 @@ class Stopwatch
                 int size = 0;
                 unsigned char * data = serialiseTimings(size);
 
-                sendto(sockfd, data, size, 0, (struct sockaddr *) &servaddr, sizeof(servaddr));
+                sendto(sockfd, (char *) data, size, 0, (struct sockaddr *) &servaddr, sizeof(servaddr));
 
                 free(data);
 
@@ -144,9 +162,13 @@ class Stopwatch
     private:
         Stopwatch()
         {
+			// Initialize WinSock
+			WSADATA wsaData;
+			WSAStartup(MAKEWORD(2, 2), &wsaData);
+
             memset(&servaddr, 0, sizeof(servaddr));
             servaddr.sin_family = AF_INET;
-            servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+            InetPton(AF_INET, _T("127.0.0.1"), &servaddr.sin_addr.s_addr);
             servaddr.sin_port = htons(45454);
             sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
@@ -159,7 +181,7 @@ class Stopwatch
 
         virtual ~Stopwatch()
         {
-            close(sockfd);
+            _close(sockfd);
         }
 
         unsigned char * serialiseTimings(int & packetSize)
@@ -181,7 +203,8 @@ class Stopwatch
 
             for(std::map<std::string, float>::const_iterator it = timings.begin(); it != timings.end(); it++)
             {
-                valuePointer = (float *)mempcpy(valuePointer, it->first.c_str(), it->first.length() + 1);
+				size_t n = it->first.length() + 1;
+                valuePointer = (float *) (((char *) memcpy(valuePointer, it->first.c_str(), n)) + n);
                 *valuePointer++ = it->second;
             }
 

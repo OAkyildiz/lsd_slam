@@ -20,6 +20,7 @@
 
 #pragma once
 #include <vector>
+#include <deque>
 #include <boost/thread.hpp>
 #include <boost/thread/shared_mutex.hpp>
 #include <boost/thread/condition_variable.hpp>
@@ -32,7 +33,7 @@
 
 #include "Tracking/Relocalizer.h"
 
-
+#include "win_polyfill.h"
 
 namespace lsd_slam
 {

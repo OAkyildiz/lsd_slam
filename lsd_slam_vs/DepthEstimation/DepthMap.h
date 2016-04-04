@@ -19,13 +19,14 @@
 */
 
 #pragma once
+#include <deque>
 #include "util/EigenCoreInclude.h"
 #include "opencv2/core/core.hpp"
 #include "util/settings.h"
 #include "util/IndexThreadReduce.h"
 #include "util/SophusUtil.h"
 
-
+#include "win_polyfill.h"
 
 namespace lsd_slam
 {

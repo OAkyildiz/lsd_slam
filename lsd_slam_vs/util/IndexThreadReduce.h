@@ -169,7 +169,7 @@ private:
 				assert(callPerIndex != 0);
 
 				RunningStats s;
-				callPerIndex(todo, std::min(todo+stepSize, maxIndex), &s);
+				callPerIndex(todo, (std::min)(todo+stepSize, maxIndex), &s);
 
 				lock.lock();
 				runningStats.add(&s);

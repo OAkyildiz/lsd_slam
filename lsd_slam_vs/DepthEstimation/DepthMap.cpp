@@ -32,6 +32,8 @@
 #include "IOWrapper/ImageDisplay.h"
 #include "GlobalMapping/KeyFrameGraph.h"
 
+#include "win_polyfill.h"
+
 
 namespace lsd_slam
 {
@@ -1121,7 +1123,6 @@ void DepthMap::updateKeyframe(std::deque< std::shared_ptr<Frame> > referenceFram
 	}
 
 	struct timeval tv_start, tv_end;
-
 
 	gettimeofday(&tv_start, NULL);
 	observeDepth();
