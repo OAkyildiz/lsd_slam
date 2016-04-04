@@ -33,6 +33,8 @@ See the [README](ext/README.md) in the `ext` (external) folder for instructions 
 - sophus (https://github.com/stevenlovegrove/Sophus.git fork, header only)
 - zlib (http://www.zlib.net/, build with cmake (VS2015)
 
+Precompiled binaries for all dependencies except Boost and OpenCV are available under [releases](https://github.com/ScottSWu/lsd_slam/releases/download/v0.1-ext/ext.zip)
+
 ## Modifications Made
 
 - A fork of Sophus for MSVC was used
