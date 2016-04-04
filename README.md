@@ -29,7 +29,7 @@ See the [README](ext/README.md) in the `ext` (external) folder for instructions 
   - csparse (same)
   - freeglut (same)
 - opencv3 (3.1.0, http://opencv.org/, use installer)
-- openfabmap (TODO)
+- openfabmap (https://github.com/arrenglover/openfabmap, build with cmake (VS2015), adjust options to include opencv3 AND opencv3 lib)
 - sophus (https://github.com/stevenlovegrove/Sophus.git fork, header only)
 - zlib (http://www.zlib.net/, build with cmake (VS2015)
 
