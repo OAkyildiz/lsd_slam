@@ -4,11 +4,31 @@ namespace lsd_slam {
 	WebsocketClientOutput3DWrapper::WebsocketClientOutput3DWrapper(std::string inAddr, int inPort) : addr(inAddr), port(inPort) {
 		char tmpAddr[128];
 		strcpy_s(tmpAddr, addr.c_str());
-		wsc = WebSocket::from_direct(tmpAddr, port, "");
+
+		using easywsclient::WebSocket;
+		#ifdef _WIN32
+		INT rc;
+		WSADATA wsaData;
+
+		rc = WSAStartup(MAKEWORD(2, 2), &wsaData);
+		if (rc) {
+
+			printf("WSAStartup Failed.\n");
+			wsc->close();
+			delete wsc;
+			WSACleanup();
+			throw std::exception("test");
+
+		}
+		#endif
+		else
+			wsc = WebSocket::from_url("ws:://127.0.0.1:9000");
+	
 	}
 
 	WebsocketClientOutput3DWrapper::~WebsocketClientOutput3DWrapper() {
 		wsc->close();
+		WSACleanup();
 		delete wsc;
 	}
 

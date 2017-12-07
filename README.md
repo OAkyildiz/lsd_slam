@@ -1,4 +1,4 @@
-# LSD-SLAM: Large-Scale Direct Monocular SLAM
+﻿# LSD-SLAM: Large-Scale Direct Monocular SLAM
 
 LSD-SLAM is a novel approach to real-time monocular SLAM. It is fully direct (i.e. does not use keypoints / features) and creates large-scale, 
 semi-dense maps in real-time on a laptop. For more information see
@@ -16,7 +16,7 @@ This fork contains a version that relieves the user of the horrors of a ROS depe
 
 # Fork
 
-This fork is a personal attempt at using LSD-SLAM on Windows through Visual Studio.
+This is a fork of ScottSWU's work on using LSD-SLAM on Windows through Visual Studio. 
 
 ## Setting Up External Libraries
 

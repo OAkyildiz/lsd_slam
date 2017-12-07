@@ -40,6 +40,9 @@
 
 #include "opencv2/opencv.hpp"
 
+#define _WIN32_WINNT		0x0A00  
+#define _WIN32_WINNT_WIN10	0x0A00
+
 std::vector<std::string> files;
 int w, h, w_inp, h_inp;
 ThreadMutexObject<bool> lsdDone(false);
@@ -258,7 +261,7 @@ int main(int argc, char** argv)
 	Resolution::getInstance(w, h);
 	Intrinsics::getInstance(fx, fy, cx, cy);
 
-	Output3DWrapper* outputWrapper = new WebsocketClientOutput3DWrapper("localhost", 9000);
+	Output3DWrapper* outputWrapper = new WebsocketClientOutput3DWrapper("127.0.0.1", 9000);
 
 	// make slam system
 	SlamSystem * system = new SlamSystem(w, h, K, doSlam);
